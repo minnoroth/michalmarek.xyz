@@ -1,0 +1,64 @@
+{
+    "card": {
+        "name": "Michal Marek",
+        "profession": "Full Stack Developer",
+        "location": "České Budějovice, Czech Republic",
+        "phone": "+420 773 462 858",
+        "email": "marek.michal.cb@gmail.com",
+        "about": "Specializing in modern application development.",
+        "linkedin": {
+            "url": "https://www.linkedin.com/in/marek-cb/",
+            "text": "LinkedIn"
+        }
+    },
+    "sections": {
+        "tech": {
+            "title": "Technical Skills",
+            "categories": {
+                "programming": "Programming Languages & Frameworks",
+                "databases": "Databases & Data Management",
+                "devops": "Development & Operations"
+            }
+        },
+        "soft": {
+            "title": "Soft Skills",
+            "teamwork": {
+                "name": "Team Collaboration",
+                "description": "Ability to work effectively in a team and contribute to a positive atmosphere."
+            },
+            "communication": {
+                "name": "Communication",
+                "description": "Clear and purposeful communication with colleagues and clients."
+            },
+            "quickLearner": {
+                "name": "Quick Learner",
+                "description": "Ability to addapt to new technologies and tools quickly."
+            },
+            "attentionToDetail": {
+                "name": "Attention to Detail",
+                "description": "Ability to pay attention to details and ensure accuracy."
+            },
+            "foreignLanguages": {
+                "name": "Languages",
+                "description": "Active knowledge of multiple languages",
+                "languages": {
+                    "czech": {
+                        "name": "Czech",
+                        "level": "C2",
+                        "description": "Native speaker"
+                    },
+                    "english": {
+                        "name": "English",
+                        "level": "C1",
+                        "description": "Professionally proficient"
+                    },
+                    "german": {
+                        "name": "German",
+                        "level": "B1",
+                        "description": "Intermediate level"
+                    }
+                }
+            }
+        }
+    }
+} 
