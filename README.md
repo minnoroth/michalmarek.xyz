@@ -1,6 +1,6 @@
-# Michal Marek - Business Card
+# Michal Marek - Business Card Website
 
-[![Deployment Status](https://img.shields.io/github/deployments/minnoroth/michalmarek.xyz/production?label=vercel&logo=vercel&logoColor=white)](https://michalmarek.xyz)
+[![Vercel](https://vercelbadge.vercel.app/api/minnoroth/michalmarek.xyz)](https://michalmarek.xyz)
 
 This is my personal business card website built with Next.js, Tailwind CSS, and Framer Motion. Developing this website was a great way to learn about these technologies and experiment with the Claude AI model via [Cursor](https://www.cursor.com/).
 
