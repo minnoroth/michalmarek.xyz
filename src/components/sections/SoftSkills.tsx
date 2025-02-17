@@ -38,6 +38,10 @@ export function SoftSkills({ dictionary }: SoftSkillsProps) {
         {
             name: dictionary.sections.soft.quickLearner.name,
             description: dictionary.sections.soft.quickLearner.description
+        },
+        {
+            name: dictionary.sections.soft.attentionToDetail.name,
+            description: dictionary.sections.soft.attentionToDetail.description
         }
     ];
 

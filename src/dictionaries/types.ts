@@ -34,6 +34,10 @@ type Dictionary = {
                 name: string;
                 description: string;
             };
+            attentionToDetail: {
+                name: string;
+                description: string;
+            };
             foreignLanguages: {
                 name: string;
                 description: string;
