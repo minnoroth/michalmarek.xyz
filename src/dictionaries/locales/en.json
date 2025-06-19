@@ -16,6 +16,8 @@
             "title": "Technical Skills",
             "categories": {
                 "programming": "Programming Languages & Frameworks",
+                "frontend": "Frontend Technologies",
+                "backend": "Backend Technologies",
                 "databases": "Databases & Data Management",
                 "devops": "Development & Operations"
             }

@@ -16,6 +16,8 @@
             "title": "Technické dovednosti",
             "categories": {
                 "programming": "Programovací jazyky & Frameworky",
+                "frontend": "Frontendové technologie",
+                "backend": "Backendové technologie",
                 "databases": "Databáze & Správa dat",
                 "devops": "Development & Operations"
             }

@@ -16,6 +16,8 @@ type Dictionary = {
             title: string;
             categories: {
                 programming: string;
+                frontend: string;
+                backend: string;
                 databases: string;
                 devops: string;
             }
