@@ -1,66 +1,66 @@
 {
-    "card": {
-        "name": "Michal Marek",
-        "profession": "Full Stack Developer",
-        "location": "České Budějovice",
-        "phone": "+420 773 462 858",
-        "email": "marek.michal.cb@gmail.com",
-        "about": "Specializuji se na vývoj moderních aplikací.",
-        "linkedin": {
-            "url": "https://www.linkedin.com/in/marek-cb/",
-            "text": "LinkedIn"
-        }
-    },
-    "sections": {
-        "tech": {
-            "title": "Technické dovednosti",
-            "categories": {
-                "programming": "Programovací jazyky & Frameworky",
-                "frontend": "Frontendové technologie",
-                "backend": "Backendové technologie",
-                "databases": "Databáze & Správa dat",
-                "devops": "Development & Operations"
-            }
-        },
-        "soft": {
-            "title": "Soft Skills",
-            "teamwork": {
-                "name": "Týmová spolupráce",
-                "description": "Schopnost efektivně pracovat v týmu a přispívat k pozitivní atmosféře."
-            },
-            "communication": {
-                "name": "Komunikace",
-                "description": "Jasná a účelná komunikace s kolegy i klienty."
-            },
-            "quickLearner": {
-                "name": "Učenlivost",
-                "description": "Schopnost se rychle přizpůsobit novým technologiím a nástrojům."
-            },
-            "attentionToDetail": {
-                "name": "Cit pro detail",
-                "description": "Schopnost si všímat a zapracovat maličkosti."
-            },
-            "foreignLanguages": {
-                "name": "Cizí jazyky",
-                "description": "Aktivní znalost několika jazyků",
-                "languages": {
-                    "czech": {
-                        "name": "Čeština",
-                        "level": "C2",
-                        "description": "Rodilý mluvčí"
-                    },
-                    "english": {
-                        "name": "Angličtina",
-                        "level": "C1",
-                        "description": "Profesionální úroveň"
-                    },
-                    "german": {
-                        "name": "Němčina",
-                        "level": "B1",
-                        "description": "Pokročilá úroveň"
-                    }
-                }
-            }
-        }
-    }
-} 
+	"card": {
+		"name": "Michal Marek",
+		"profession": "Full Stack Developer",
+		"location": "České Budějovice",
+		"phone": "+420 773 462 858",
+		"email": "marek.michal.cb@gmail.com",
+		"about": "Specializuji se na vývoj moderních aplikací.",
+		"linkedin": {
+			"url": "https://www.linkedin.com/in/marek-cb/",
+			"text": "LinkedIn"
+		}
+	},
+	"sections": {
+		"tech": {
+			"title": "Technické dovednosti",
+			"categories": {
+				"programming": "Programovací jazyky & Frameworky",
+				"frontend": "Frontendové technologie",
+				"backend": "Backendové technologie",
+				"databases": "Databáze & Správa dat",
+				"devops": "Development & Operations"
+			}
+		},
+		"soft": {
+			"title": "Soft Skills",
+			"teamwork": {
+				"name": "Týmová spolupráce",
+				"description": "Schopnost efektivně pracovat v týmu a přispívat k pozitivní atmosféře."
+			},
+			"communication": {
+				"name": "Komunikace",
+				"description": "Jasná a účelná komunikace s kolegy i klienty."
+			},
+			"quickLearner": {
+				"name": "Učenlivost",
+				"description": "Schopnost se rychle přizpůsobit novým technologiím a nástrojům."
+			},
+			"attentionToDetail": {
+				"name": "Cit pro detail",
+				"description": "Schopnost si všímat a zapracovat maličkosti."
+			},
+			"foreignLanguages": {
+				"name": "Cizí jazyky",
+				"description": "Aktivní znalost několika jazyků",
+				"languages": {
+					"czech": {
+						"name": "Čeština",
+						"level": "C2",
+						"description": "Rodilý mluvčí"
+					},
+					"english": {
+						"name": "Angličtina",
+						"level": "C1",
+						"description": "Profesionální úroveň"
+					},
+					"german": {
+						"name": "Němčina",
+						"level": "B1",
+						"description": "Pokročilá úroveň"
+					}
+				}
+			}
+		}
+	}
+}
