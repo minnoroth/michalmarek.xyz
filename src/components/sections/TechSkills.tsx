@@ -21,7 +21,6 @@ export function TechSkills({ dictionary }: TechSkillsProps) {
 							</span>
 							<ul className="ml-4 mt-1 space-y-1 text-muted-foreground">
 								<li>ReactJS (Next.js)</li>
-								<li>Vue.js (Nuxt.js)</li>
 								<li>TypeScript</li>
 								<li>Material UI</li>
 								<li>Figma</li>
@@ -33,7 +32,6 @@ export function TechSkills({ dictionary }: TechSkillsProps) {
 							</span>
 							<ul className="ml-4 mt-1 space-y-1 text-muted-foreground">
 								<li>Java: Spring Boot</li>
-								<li>PHP: Symfony</li>
 								<li>GraphQL</li>
 								<li>REST API</li>
 							</ul>
@@ -47,7 +45,6 @@ export function TechSkills({ dictionary }: TechSkillsProps) {
 					</h3>
 					<ul className="space-y-1 text-sm text-foreground">
 						<li>PostgreSQL</li>
-						<li>Oracle</li>
 						<li>Elasticsearch</li>
 					</ul>
 				</div>
