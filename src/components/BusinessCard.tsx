@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { RotateCcw } from "lucide-react";
+import { Undo2 } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { Language } from "@/config/languages";
@@ -60,13 +60,30 @@ export function BusinessCard({
 		updateSection("about");
 	};
 
+	const handleCardClick = (event: React.MouseEvent<HTMLDivElement>) => {
+		const target = event.target as HTMLElement;
+		if (target.closest("button, a, [data-no-flip]")) {
+			return;
+		}
+
+		if (isFlipped) {
+			handleFlipBack();
+		} else {
+			handleFlip();
+		}
+	};
+
 	return (
 		<div
 			className="card-3d-wrapper mx-auto"
 			style={{ width: CARD_WIDTH, height: CARD_HEIGHT }}
 		>
 			<div
-				className={cn("card-3d w-full h-full relative", isFlipped && "flipped")}
+				className={cn(
+					"card-3d w-full h-full relative cursor-pointer",
+					isFlipped && "flipped",
+				)}
+				onClick={handleCardClick}
 			>
 				{/* Front of the card - About section */}
 				<div
@@ -90,20 +107,16 @@ export function BusinessCard({
 						<ThemeSwitch />
 					</div>
 
-					{/* Flip button */}
-					<button
-						type="button"
-						onClick={handleFlip}
+					{/* Flip hint */}
+					<div
 						className={cn(
 							"absolute bottom-3 right-3 z-10",
-							"p-2 rounded transition-all duration-200",
-							"hover:bg-muted hover:scale-110",
-							"text-muted-foreground hover:text-foreground",
+							"p-2 text-muted-foreground/70",
 						)}
-						aria-label="Flip card"
+						aria-hidden="true"
 					>
-						<RotateCcw className="h-4 w-4" />
-					</button>
+						<Undo2 className="h-4 w-4" />
+					</div>
 
 					{/* Content area - Always About section on front */}
 					<div className="h-full p-6 pr-16 flex flex-col justify-center overflow-hidden">
@@ -146,20 +159,16 @@ export function BusinessCard({
 						<ThemeSwitch />
 					</div>
 
-					{/* Flip back button */}
-					<button
-						type="button"
-						onClick={handleFlipBack}
+					{/* Flip hint */}
+					<div
 						className={cn(
 							"absolute bottom-3 right-3 z-10",
-							"p-2 rounded transition-all duration-200",
-							"hover:bg-muted hover:scale-110",
-							"text-muted-foreground hover:text-foreground",
+							"p-2 text-muted-foreground/70",
 						)}
-						aria-label="Flip back"
+						aria-hidden="true"
 					>
-						<RotateCcw className="h-4 w-4" />
-					</button>
+						<Undo2 className="h-4 w-4 rotate-180" />
+					</div>
 
 					{/* Content area - Tech Skills */}
 					<div className="h-full p-6 pr-16 flex flex-col justify-center overflow-hidden">
