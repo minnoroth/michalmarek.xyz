@@ -24,14 +24,12 @@ export default function Home({ params: { locale }, searchParams }: Props) {
     : 'about';
 
   return (
-    <main className="min-h-screen w-full bg-background text-foreground">
-      <section className="container mx-auto px-4 py-16">
-        <BusinessCard 
-          dictionary={dictionary} 
-          locale={locale} 
-          initialSection={initialSection}
-        />
-      </section>
+    <main className="min-h-screen w-full gradient-bg flex items-center justify-center p-4">
+      <BusinessCard 
+        dictionary={dictionary} 
+        locale={locale} 
+        initialSection={initialSection}
+      />
     </main>
   );
 }

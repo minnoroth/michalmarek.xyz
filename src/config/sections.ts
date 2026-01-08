@@ -1,4 +1,4 @@
-export const CARD_SECTIONS = ["about", "tech", "soft"] as const;
+export const CARD_SECTIONS = ["about", "tech"] as const;
 export type CardSection = (typeof CARD_SECTIONS)[number];
 
 export const getNextSection = (

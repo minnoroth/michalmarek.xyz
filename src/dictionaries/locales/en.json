@@ -24,6 +24,7 @@
 		},
 		"soft": {
 			"title": "Soft Skills",
+			"personalTraits": "Personal Traits",
 			"teamwork": {
 				"name": "Team Collaboration",
 				"description": "Ability to work effectively in a team and contribute to a positive atmosphere."

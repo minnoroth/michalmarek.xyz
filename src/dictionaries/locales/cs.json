@@ -24,6 +24,7 @@
 		},
 		"soft": {
 			"title": "Soft Skills",
+			"personalTraits": "Osobní vlastnosti",
 			"teamwork": {
 				"name": "Týmová spolupráce",
 				"description": "Schopnost efektivně pracovat v týmu a přispívat k pozitivní atmosféře."

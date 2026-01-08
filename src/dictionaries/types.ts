@@ -24,6 +24,7 @@ type Dictionary = {
 		};
 		soft: {
 			title: string;
+			personalTraits: string;
 			teamwork: {
 				name: string;
 				description: string;
