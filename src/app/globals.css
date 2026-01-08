@@ -115,6 +115,11 @@
   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.card-3d.card-intro {
+  animation: card-intro-flip 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: both;
+}
+
 .card-3d.flipped {
   transform: rotateY(180deg);
 }
@@ -135,6 +140,15 @@
 
 .card-back {
   transform: rotateY(180deg);
+}
+
+@keyframes card-intro-flip {
+  0% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
 }
 
 /* Subtle edge highlight for paper effect */

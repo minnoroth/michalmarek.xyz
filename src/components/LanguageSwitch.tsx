@@ -20,10 +20,15 @@ export function LanguageSwitch({ currentLocale }: LanguageSwitchProps) {
 		router.push(newPathname);
 	};
 
+	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+		event.stopPropagation();
+		switchLanguage();
+	};
+
 	return (
 		<button
 			type="button"
-			onClick={switchLanguage}
+			onClick={handleClick}
 			className={cn(
 				"p-2 rounded-lg transition-all duration-200 w-8 h-8 flex items-center justify-center",
 				"hover:scale-110 hover:bg-muted",

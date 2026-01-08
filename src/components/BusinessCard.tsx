@@ -1,6 +1,5 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
 import { Undo2 } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -31,6 +30,7 @@ export function BusinessCard({
 	const searchParams = useSearchParams();
 	const [currentSection, setCurrentSection] =
 		useState<CardSection>(initialSection);
+	const [isIntroAnimating, setIsIntroAnimating] = useState(false);
 
 	// Sync flip state with current section
 	const isFlipped = currentSection === "tech";
@@ -42,6 +42,38 @@ export function BusinessCard({
 			setCurrentSection(sectionParam);
 		}
 	}, [searchParams]);
+
+	useEffect(() => {
+		if (initialSection !== "about") {
+			setIsIntroAnimating(false);
+			return;
+		}
+
+		let shouldAnimate = true;
+		try {
+			const storageKey = "cardIntroPlayed";
+			if (sessionStorage.getItem(storageKey) === "true") {
+				shouldAnimate = false;
+			} else {
+				sessionStorage.setItem(storageKey, "true");
+			}
+		} catch {
+			shouldAnimate = true;
+		}
+
+		if (!shouldAnimate) {
+			setIsIntroAnimating(false);
+			return;
+		}
+
+		setIsIntroAnimating(true);
+
+		const timer = window.setTimeout(() => {
+			setIsIntroAnimating(false);
+		}, 1000);
+
+		return () => window.clearTimeout(timer);
+	}, [initialSection]);
 
 	const updateSection = (section: CardSection) => {
 		const params = new URLSearchParams(searchParams.toString());
@@ -61,6 +93,10 @@ export function BusinessCard({
 	};
 
 	const handleCardClick = (event: React.MouseEvent<HTMLDivElement>) => {
+		if (isIntroAnimating) {
+			return;
+		}
+
 		const target = event.target as HTMLElement;
 		if (target.closest("button, a, [data-no-flip]")) {
 			return;
@@ -80,7 +116,8 @@ export function BusinessCard({
 		>
 			<div
 				className={cn(
-					"card-3d w-full h-full relative cursor-pointer",
+					"card-3d w-full h-full relative cursor-pointer group",
+					isIntroAnimating && "card-intro",
 					isFlipped && "flipped",
 				)}
 				onClick={handleCardClick}
@@ -110,8 +147,9 @@ export function BusinessCard({
 					{/* Flip hint */}
 					<div
 						className={cn(
-							"absolute bottom-3 right-3 z-10",
+							"absolute bottom-3 right-3 z-10 pointer-events-none",
 							"p-2 text-muted-foreground/70",
+							"group-hover:animate-pulse",
 						)}
 						aria-hidden="true"
 					>
@@ -120,20 +158,9 @@ export function BusinessCard({
 
 					{/* Content area - Always About section on front */}
 					<div className="h-full p-6 pr-16 flex flex-col justify-center overflow-hidden">
-						<AnimatePresence mode="wait">
-							<motion.div
-								key="about"
-								initial={{ opacity: 0, y: 10 }}
-								animate={{ opacity: 1, y: 0 }}
-								exit={{ opacity: 0, y: -10 }}
-								transition={{
-									duration: 0.25,
-									ease: "easeOut",
-								}}
-							>
-								<CardInfo dictionary={dictionary} />
-							</motion.div>
-						</AnimatePresence>
+						<div>
+							<CardInfo dictionary={dictionary} />
+						</div>
 					</div>
 				</div>
 
@@ -162,8 +189,9 @@ export function BusinessCard({
 					{/* Flip hint */}
 					<div
 						className={cn(
-							"absolute bottom-3 right-3 z-10",
+							"absolute bottom-3 right-3 z-10 pointer-events-none",
 							"p-2 text-muted-foreground/70",
+							"group-hover:animate-pulse",
 						)}
 						aria-hidden="true"
 					>
@@ -172,20 +200,9 @@ export function BusinessCard({
 
 					{/* Content area - Tech Skills */}
 					<div className="h-full p-6 pr-16 flex flex-col justify-center overflow-hidden">
-						<AnimatePresence mode="wait">
-							<motion.div
-								key="tech"
-								initial={{ opacity: 0, y: 10 }}
-								animate={{ opacity: 1, y: 0 }}
-								exit={{ opacity: 0, y: -10 }}
-								transition={{
-									duration: 0.25,
-									ease: "easeOut",
-								}}
-							>
-								<TechSkills dictionary={dictionary} />
-							</motion.div>
-						</AnimatePresence>
+						<div>
+							<TechSkills dictionary={dictionary} />
+						</div>
 					</div>
 				</div>
 			</div>
