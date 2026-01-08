@@ -79,7 +79,7 @@ export function CardInfo({ dictionary }: CardInfoProps) {
 					<button
 						type="button"
 						onClick={() => handleCopy(dictionary.card.phone, "phone")}
-						className="p-0.5 hover:bg-muted rounded transition-colors ml-auto"
+						className="p-0.5 hover:bg-muted rounded transition-colors"
 						aria-label="Copy phone number"
 					>
 						{copied.phone ? (
@@ -92,11 +92,13 @@ export function CardInfo({ dictionary }: CardInfoProps) {
 
 				<div className="flex items-center gap-2">
 					<Mail className="h-3.5 w-3.5 flex-shrink-0 text-muted-foreground" />
-					<span className="text-muted-foreground truncate">{dictionary.card.email}</span>
+					<span className="text-muted-foreground truncate">
+						{dictionary.card.email}
+					</span>
 					<button
 						type="button"
 						onClick={() => handleCopy(dictionary.card.email, "email")}
-						className="p-0.5 hover:bg-muted rounded transition-colors ml-auto"
+						className="p-0.5 hover:bg-muted rounded transition-colors"
 						aria-label="Copy email"
 					>
 						{copied.email ? (

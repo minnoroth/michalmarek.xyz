@@ -31,7 +31,7 @@ export function BusinessCard({
 	const searchParams = useSearchParams();
 	const [currentSection, setCurrentSection] =
 		useState<CardSection>(initialSection);
-	
+
 	// Sync flip state with current section
 	const isFlipped = currentSection === "tech";
 
@@ -71,7 +71,7 @@ export function BusinessCard({
 				{/* Front of the card - About section */}
 				<div
 					className={cn(
-						"card-face absolute inset-0",
+						"card-face card-front absolute inset-0",
 						"bg-card text-card-foreground",
 						"rounded-sm border border-border/30",
 						"paper-texture paper-edge",
